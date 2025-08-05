@@ -7,6 +7,7 @@ import { AuthGuard } from '../services/auth/auth.guard';
 import { SettingComponent } from '../modules/setting/setting.component';
 import { LoginGaurdService } from '../services/gaurds/login-gaurd.service';
 export const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {path:'',component:MainLayoutComponent
     ,children:[
       {path:'dashboard',component:DashboardComponent,canActivate:[AuthGuard]},
